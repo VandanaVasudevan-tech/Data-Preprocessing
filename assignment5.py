@@ -96,19 +96,16 @@ df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
 # After the process of encoding, perform the scaling of the features using
 # standardscaler and minmaxscaler.
 
-X = df_encoded.copy()
-
 # Standard Scaling
 standard_scaler = StandardScaler()
-X_standard = X.copy()
-X_standard[['age', 'salary']] = standard_scaler.fit_transform(
-    X_standard[['age', 'salary']]
+df_encoded[['age', 'salary']] = standard_scaler.fit_transform(
+    df_encoded[['age', 'salary']]
 )
 
 # Min-Max Scaling
 minmax_scaler = MinMaxScaler()
-X_minmax = X.copy()
-X_minmax[['age', 'salary']] = minmax_scaler.fit_transform(
-    X_minmax[['age', 'salary']]
+df_encoded[['age', 'salary']] = minmax_scaler.fit_transform(
+    df_encoded[['age', 'salary']]
 )
+
 df_encoded.to_csv('employee_cleaned_encoded.csv', index=False)
