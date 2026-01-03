@@ -13,7 +13,7 @@ for col in df.columns:
     print("Number of unique values: ", df[col].nunique())
 
 # 1(b) Perform the statistical analysis and renaming of the columns.
-# print(df.describe(include='all'))
+print(df.describe(include='all'))
 df.columns = df.columns.str.lower().str.replace(" ", "_")
 print(df.columns)
 
@@ -109,3 +109,4 @@ df_encoded[['age', 'salary']] = minmax_scaler.fit_transform(
 )
 
 df_encoded.to_csv('employee_cleaned_encoded.csv', index=False)
+
