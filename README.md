@@ -26,39 +26,39 @@ Description: Contains employee-related information such as age, salary, company,
 
 1️⃣ Data Exploration
 
-  Loaded the dataset using Pandas
+  + Loaded the dataset using Pandas
   
-  Displayed dataset structure using df.info()
+  + Displayed dataset structure using df.info()
 
-Identified:
+* Identified:
 
-Unique values per column
++ Unique values per column
 
-Number of unique entries in each feature
++ Number of unique entries in each feature
 
 2️⃣ Data Cleaning & Preprocessing
 
-Renamed columns to lowercase and replaced spaces with underscores
++ Renamed columns to lowercase and replaced spaces with underscores
 
-Identified missing values
++ Identified missing values
 
-Treated invalid and missing data:
++ Treated invalid and missing data:
 
-Replaced 0 values in age with NaN
++ Replaced 0 values in age with NaN
 
-Filled missing age values using median
++ Filled missing age values using median
 
-Filled missing salary values using mean
++ Filled missing salary values using mean
 
-Filled missing categorical values using mode
++ Filled missing categorical values using mode
 
-Removed duplicate records
++ Removed duplicate records
 
 3️⃣ Outlier Detection and Treatment
 
-Visualized outliers using boxplots for:
++ Visualized outliers using boxplots for:
 
-Age
+1. Age
 
 
 
@@ -67,7 +67,7 @@ Age
 
 
 
-Salary
+2. Salary
 
 
 
@@ -77,26 +77,26 @@ Salary
 
 
 
-Applied Interquartile Range (IQR) method to remove outliers from numerical columns
+3. Applied Interquartile Range (IQR) method to remove outliers from numerical columns
 
 4️⃣ Data Analysis & Visualization
 
-Filtered employees with:
++ Filtered employees with:
 
-age > 40
++ age > 40
 
-salary < 5000
++ salary < 5000
 
 Visualized:
 
-Age vs Salary using a scatter plot
++ Age vs Salary using a scatter plot
 
 
 <img width="743" height="505" alt="image" src="https://github.com/user-attachments/assets/11d0a3a5-55c2-4b63-bd22-f2eb1ed2d7af" />
 
 
 
-Number of employees by place using a bar chart
++ Number of employees by place using a bar chart
 
 
 <img width="795" height="606" alt="image" src="https://github.com/user-attachments/assets/8cdf83a1-2196-4236-882d-106c459bd929" />
@@ -106,31 +106,31 @@ Number of employees by place using a bar chart
 
 5️⃣ Categorical Encoding
 
-Converted categorical variables into numerical format using One-Hot Encoding
++ Converted categorical variables into numerical format using One-Hot Encoding
 
-Encoded columns:
++ Encoded columns:
 
-company
+1. company
 
-place
+2. place
 
-country
+3. country
 
-Used drop_first=True to avoid multicollinearity
++ Used drop_first=True to avoid multicollinearity
 
 6️⃣ Feature Scaling
 
-Applied StandardScaler to normalize age and salary
++ Applied StandardScaler to normalize age and salary
 
-Applied MinMaxScaler to rescale age and salary between 0 and 1
++ Applied MinMaxScaler to rescale age and salary between 0 and 1
 
-Updated the scaled values directly in the encoded DataFrame
++ Updated the scaled values directly in the encoded DataFrame
 
 7️⃣ Exporting Cleaned Data
 
-Saved the final cleaned, encoded, and scaled dataset to:
++ Saved the final cleaned, encoded, and scaled dataset to:
 
-employee_cleaned_encoded.csv
+  		employee_cleaned_encoded.csv
 
 | File Name                    | Description                          |
 | ---------------------------- | ------------------------------------ |
@@ -142,15 +142,15 @@ employee_cleaned_encoded.csv
 
 🚀 Key Learnings
 
-Importance of data cleaning before analysis
++ Importance of data cleaning before analysis
 
-Handling missing and invalid values effectively
++ Handling missing and invalid values effectively
 
-Outlier detection using IQR
++ Outlier detection using IQR
 
-One-Hot Encoding for categorical variables
++ One-Hot Encoding for categorical variables
 
-Feature scaling using StandardScaler and MinMaxScaler
++ Feature scaling using StandardScaler and MinMaxScaler
 
 
 
